@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Pedro/Dropbox/FAETERJ/2 periodo/FPR/Recursividade/Recursividade.c
+stdio.h
+-
+string.h
+-
+ctype.h
+-
+

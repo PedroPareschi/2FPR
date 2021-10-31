@@ -1,0 +1,16 @@
+//Inclusão de bibliotecas
+#include <stdio.h>
+
+//Declaração das funções
+
+//Programa main
+void main(){
+    	
+	//Declaração de variáveis
+	
+	
+	//Corpo do programa
+
+	//Solicitação de variáveis
+	
+}

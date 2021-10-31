@@ -1,0 +1,3 @@
+C:/Users/Pedro/Dropbox/FAETERJ/2 periodo/FPR/RecursividadeStrings/cmake-build-debug/CMakeFiles/RecursividadeStrings.dir
+C:/Users/Pedro/Dropbox/FAETERJ/2 periodo/FPR/RecursividadeStrings/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Pedro/Dropbox/FAETERJ/2 periodo/FPR/RecursividadeStrings/cmake-build-debug/CMakeFiles/rebuild_cache.dir

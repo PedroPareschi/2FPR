@@ -1,0 +1,102 @@
+//Inclusão de bibliotecas
+#include <stdio.h>
+
+//Definição de tamanho
+#define LIN 25
+#define COL 25
+
+//Protótipo das funções
+void lerMatriz(int matriz[LIN][COL], int *linha, int *coluna);
+void imprimirMatriz(int matriz[LIN][COL], int linha, int coluna);
+
+//Programa main
+void main(){
+
+	//Declaração de variáveis
+    int matriz[LIN][COL], linha, coluna;
+
+	//Corpo do programa
+
+	//Solicitação de variáveis
+    lerMatriz(matriz, &linha, &coluna);
+
+	//Imprimindo resultado
+    imprimirMatriz(matriz, linha, coluna);
+}
+
+//***********************************FUNCOES DE AUXILIO*****************************************************************************
+
+//Função para ler matriz
+void lerMatriz(int matriz[LIN][COL], int *linha, int *coluna){
+    //declaracao de variaveis
+    int i, j;
+    //corpo da função
+
+    do{//solicitando tamanho da matriz
+        printf("Digite a quantidade de linhas: ");
+        scanf("%d", linha);
+        if((*linha < 0) || (*linha > LIN)){
+            printf("\nErro, matriz com numero de linhas invalido. Deve ser igual ou inferior ao tamanho maximo e nao negativo\n");
+        }
+    }while((*linha < 0) || (*linha > LIN));//caso o tamanho seja invalido
+
+    do{//solicitando tamanho da matriz
+        printf("Digite a quantidade de colunas: ");
+        scanf("%d", coluna);
+        if((*coluna < 0) || (*coluna > COL)){
+            printf("\nErro, matriz com numero de colunas invalido. Deve ser igual ou inferior ao tamanho maximo e nao negativo\n");
+        }
+    }while((*coluna < 0) || (*coluna > COL));//caso o tamanho seja invalido
+
+    for(i = 0; i < *linha; i++){
+        for(j = 0; j < *coluna; j++){
+            printf("Digite o valor [%d][%d] da matriz: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+}
+
+
+//Função para imprimir matriz
+void imprimirMatriz(int matriz[LIN][COL], int linha, int coluna){
+    int i, j;//declaração de variaveis
+    for(i = 0; i < linha; i++){
+        for(j = 0; j < coluna; j++){
+            printf("%d ", matriz[i][j]);//imprimindo cada elemento do matriz
+        }
+        printf("\n");//espaco a mais no final da matriz
+    }
+}
+
+//Função para imprimir matriz de float
+void imprimirMatrizFloat(float matriz[LIN][COL], int linha, int coluna){
+    int i, j;//declaração de variaveis
+    for(i = 0; i < linha; i++){
+        for(j = 0; j < coluna; j++){
+            printf("%.2f ", matriz[i][j]);//imprimindo cada elemento do matriz
+        }
+        printf("\n");//espaco a mais no final da matriz
+    }
+}
+
+
+//Funcao para gerar matriz aleatoria com tamanho definido pelo usuario
+void gerarMatrizAleatoria(int matriz[LIN][COL], int linha, int coluna){
+    srand(time(NULL));
+    for(int i = 0; i < linha; i++){
+        for(int j = 0; j < coluna; j++){
+            matriz[i][j] = rand()%2;
+        }
+    }
+}
+
+//Função para imprimir vetor
+void imprimirVetor(int vetor[], int tamanho){
+    printf("[");
+    int i;//declaração de variaveis
+    for(i = 0; i < tamanho; i++){
+        printf("%d ", vetor[i]);//imprimindo cada elemento do vetor
+    }
+    printf("]\n");//espaco a mais no final do vetor
+}
+//***********************************QUESTOES*****************************************************************************

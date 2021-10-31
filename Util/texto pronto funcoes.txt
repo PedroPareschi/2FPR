@@ -1,0 +1,52 @@
+//Inclusão de bibliotecas
+#include <stdio.h>
+
+//Definição de tamanho
+#define TAM 25
+
+//Protótipo das funções
+void lerVetor(int *vetor, int *tamanho);
+void imprimirVetor(int *vetor, int tamanho);
+
+//Programa main
+void main(){
+
+	//Declaração de variáveis
+  
+
+	//Corpo do programa
+
+	//Solicitação de variáveis
+    
+}
+
+//Função para ler vetor
+void lerVetor(int vetor[], int *tamanho){
+    //declaracao de variaveis
+    int i;
+    //corpo da função
+
+    do{//solicitando tamanho do vetor
+        printf("Digite o tamanho do vetor: ");
+        scanf("%d", tamanho);
+        if((*tamanho < 0) || (*tamanho > TAM)){
+            printf("\nErro, vetor com tamanho invalido. Deve ser igual ou inferior ao tamanho maximo e nao negativo\n");
+        }
+    }while((*tamanho < 0) || (*tamanho > TAM));//caso o tamanho seja invalido
+
+    for(i = 0; i < *tamanho; i++){
+        printf("Digite o valor [%d] do vetor: ", i+1);
+        scanf("%d", &vetor[i]);
+    }
+}
+
+
+//Função para imprimir vetor
+void imprimirVetor(int vetor[], int tamanho){
+    printf("[");
+    int i;//declaração de variaveis
+    for(i = 0; i < tamanho; i++){
+        printf("%d ", vetor[i]);//imprimindo cada elemento do vetor
+    }
+    printf("]\n");//espaco a mais no final do vetor
+}
